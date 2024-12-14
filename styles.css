@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+p{
+    font-size: 15px;
+
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.tasks{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 5px;
+    padding: 8px;
+}
+
+.taskItem{
+    max-width: 500px;
+    margin: 20px;
+}
