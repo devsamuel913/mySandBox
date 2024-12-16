@@ -2,8 +2,17 @@
 const camelizeButton = document.querySelector('.camelizeButton');
 const camelizeInput = document.querySelector('.camelizeInput');
 
+
+const addRangeButton = document.querySelector('.addRangeButton');
+
+
+
 //event listeners
 camelizeButton.addEventListener("click", camelize);
+
+addRangeButton.addEventListener("click",filterRange);
+
+
 
 //functions
 function camelize() {
@@ -25,4 +34,22 @@ function camelize() {
         // Alert the result
         alert(arrTwo);
     }
+}
+
+
+
+function filterRange() {
+    let arrInput = prompt("Please enter a series of numbers divided by commas:");
+    let aInput = parseInt(prompt("Please enter the number a:"));
+    let bInput = parseInt(prompt("Please enter the number b:"));
+    
+    // Split input string into an array of strings, then convert each item to an integer
+    let arr = arrInput.split(',').map(item => parseInt(item));
+    
+    // Filter the array to include only numbers between aInput and bInput (inclusive)
+    let filteredArr = arr.filter(item => item >= aInput && item <= bInput);
+    
+    // Join the filtered array into a string with commas and show the result
+    let result = filteredArr.join(',');
+    alert("The result is: " + result);
 }
